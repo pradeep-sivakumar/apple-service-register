@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sign-in</title>
+    <link rel="icon" href="apple.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="https://www.iconsdb.com/icons/preview/white/apple-xxl.png" alt="logo" height="30">
+                    iPhone Service</a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavBar"
+                    aria-controls="#myNavBar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="myNavBar">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Sign-in</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#" tabindex="-1"
+                                aria-disabled="true">Register</a>
+                        </li>
+                    </ul>
+                </div>
+        </nav>
+    </header>
+    <div class="container mt-3">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-title text-muted bg-light p-2">
+                    <h5>Sign-Up Form <span class="badge bg-danger">New
+                            Users</h5></span>
+                </div>
+                <div class="card-body">
+                    <form action="post">
+                        <div class="form-group">
+                            <label for="Name">Full Name<span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" placeholder="Enter your Full Name" id="Name"
+                                required />
+                        </div>
+                        <div class="form-group mt-2">
+                            <label for="phone">Phone Number
+                                <input type="tel" class="form-control" placeholder="+91" id="phone" required>
+                        </div>
+                        <div class="form-group mt-2">
+                            <label for="email">Email<span class="text-muted">(Optional)</span></label>
+                            <input type="email" class="form-control" placeholder="Enter your Email" id="email">
+                            <small id="phonehelp" class="form-text text-muted">We don't spam you!</small>
+                        </div>
+                        <div class="form-group mt-2">
+                            <label for="password">Password<span class="text-danger">*</span></label>
+                            <input type="password" class="form-control" placeholder="Enter your password" id="password"
+                                required>
+                            <small id="passwrd" class="form-text text-danger">Password must contain Minimum of 1
+                                Alphabet and 1 Special Symbols*</small>
+                        </div>
+                        <div class="form-group mt-2">
+                            <label for="password">Confirm Password<span class="text-danger">*</span></label>
+                            <input type="password" class="form-control" placeholder="Re-Enter your password"
+                                id="password" required>
+                        </div>
+                        <div class="form-check mt-2">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
+                            <label class="form-check-label" for="flexCheckDefault">
+                              I agree to the <a href="#">Terms and Conditions</a>.<span class="text-danger">*</span>
+                            </label>
+                          </div>
+                        <div class="mt-2"></div>
+                        <button class="btn btn-dark text-white " onclick="msg()">Signup</button>
+                    </form> 
+                    <div class="mt-2"> Already a User?
+                        <button class="btn btn-outline-primary btn-sm">Login</button>
+                    </div>
+                </div>
+                             
+                <!-- -->
+            </div>
+        </div>
+            <p class="text-muted mt-5 mb-0 text-center">
+             Copyright © 2022 Apple Inc. All rights reserved.
+            </p>
+        <script>
+            function msg() {
+                alert("We are at Maintanence,Please try after Some Time...");
+            }
+        </script>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+            crossorigin="anonymous"></script>
+
+</body>
+
+</html>
