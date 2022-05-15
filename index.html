@@ -16,7 +16,8 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-<script>
+    
+    <script>
         function SubForm() {
             $.ajax({
                 url: "https://api.apispreadsheets.com/data/H6zDJ4C91zd99P7c/",
@@ -24,7 +25,6 @@
                 data: $("#myForm").serializeArray(),
                 success: function () {
                     alert("Successfully Registered! Please click OK to Log-in"),
-                        
                 },
                 error: function () {
                     alert("There was an error :(")
@@ -32,7 +32,6 @@
             });
         }
     </script>
-
 </head>
 
 <body>
@@ -72,20 +71,20 @@
         <div class="col-sm-12">
             <div class="card">
                 <div class="card-title text-muted bg-light p-2 pl-3">
-                    <h5 style="display: inline-block">Sign-up</h5><span class="badge bg-danger rounded-pill"
-                        style="vertical-align: top"">new!</span>
+                    <h5 style="display: inline-block">Create an Account</h5><span class="badge bg-danger rounded-pill"
+                        style="vertical-align: top""><small>new users only!</small></span>
                 </div>
                 <div class=" card-body">
                         <form id="myForm">
                             <div class="form-group">
                                 <label for="Name">Full Name<span class="text-danger">*</span></label>
                                 <input name="Name" type="text" class="form-control" placeholder="Enter your Full Name"
-                                    id="Name"/>
+                                    id="Name" required />
                             </div>
                             <div class="form-group mt-2">
                                 <label for="phone">Phone Number<span class="text-danger">*</span>
                                     <input name="phone" type="tel" class="form-control" placeholder="+91" id="phone"
-                                        />
+                                        required />
                             </div>
                             <div class="form-group mt-2">
                                 <label for="email">Email<span class="text-muted">(Optional)</span></label>
@@ -96,29 +95,28 @@
                             <div class="form-group mt-2">
                                 <label for="password">Password<span class="text-danger">*</span></label>
                                 <input name="password" type="password" class="form-control"
-                                    placeholder="Enter your password" id="password"/>
+                                    placeholder="Enter your password" id="password" required />
                                 <small class="form-text text-danger">Password must contain Minimum of 1
                                     Alphabet and 1 Special Symbols*</small>
                             </div>
                             <div class="form-group mt-2">
                                 <label for="repassword">Confirm Password<span class="text-danger">*</span></label>
                                 <input name="repassword" type="password" class="form-control"
-                                    placeholder="Re-Enter your password" id="repassword"/>
+                                    placeholder="Re-Enter your password" id="repassword" required />
                             </div>
                             <div class="form-check mt-2">
                                 <input name="terms" class="form-check-input" type="checkbox" value=" Terms Accepted"
-                                    id="terms" />
+                                    id="terms" required />
                                 <label class="form-check-label" for="terms">
                                     I agree to the <a href="#">Terms and Conditions</a>.<span
                                         class="text-danger">*</span>
                                 </label>
                             </div>
-
                         </form>
-<div class="mt-2"></div>
+                        <div class="mt-2"></div>
                         <button onclick='SubForm()' class="btn btn-dark text-white">Signup</button>
                         <div class="mt-2"> Already a User?
-                          <button class="btn btn-outline-primary btn-sm">Login</button>
+                            <button onclick="login.html" class="btn btn-outline-primary btn-sm">Login</button>
                         </div>
                 </div>
 
