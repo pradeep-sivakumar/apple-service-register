@@ -14,24 +14,26 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+	<script
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
+	<script>
+		function SubForm (){
+			$.ajax({
+				url:"https://api.apispreadsheets.com/data/H6zDJ4C91zd99P7c/",
+				type:"post",
+				data:$("#myForm").serializeArray(),
+				success: function(){
+					alert("Form Data Submitted :)")
+				},
+				error: function(){
+					alert("There was an error :(")
+				}
+			});
+		}
+	</script>
     
-    <script>
-        function SubForm() {
-            $.ajax({
-                url: "https://api.apispreadsheets.com/data/H6zDJ4C91zd99P7c/",
-                type: "post",
-                data: $("#myForm").serializeArray(),
-                success: function () {
-                    alert("Successfully Registered! Please click OK to Log-in"),
-                },
-                error: function () {
-                    alert("There was an error :(")
-                }
-            });
-        }
-    </script>
 </head>
 
 <body>
@@ -112,11 +114,13 @@
                                         class="text-danger">*</span>
                                 </label>
                             </div>
-                        </form>
                         <div class="mt-2"></div>
                         <button onclick='SubForm()' class="btn btn-dark text-white">Signup</button>
+                        
+                        </form>
+                        
                         <div class="mt-2"> Already a User?
-                            <button onclick="login.html" class="btn btn-outline-primary btn-sm">Login</button>
+                            <button class="btn btn-outline-primary btn-lg">Login</button>
                         </div>
                 </div>
 
