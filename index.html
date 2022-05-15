@@ -16,6 +16,22 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+<script>
+        function SubForm() {
+            $.ajax({
+                url: "https://api.apispreadsheets.com/data/H6zDJ4C91zd99P7c/",
+                type: "post",
+                data: $("#myForm").serializeArray(),
+                success: function () {
+                    alert("Successfully Registered! Please click OK to Log-in"),
+                        window.open('login.html');
+                },
+                error: function () {
+                    alert("There was an error :(")
+                }
+            });
+        }
+    </script>
 
 </head>
 
